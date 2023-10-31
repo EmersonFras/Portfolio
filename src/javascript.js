@@ -1,7 +1,14 @@
-const container = document.getElementById("numbers");
+const container = document.querySelectorAll("#line");
 
-for (let i = 1; i <= 100; i++) {
+container.forEach((element, index) => {
     const para = document.createElement("p");
-    para.textContent = i;
-    container.appendChild(para);
-}
+    const lineNumber = index + 1;
+    para.innerHTML = `&nbsp;${lineNumber < 10 ? ` ${lineNumber}` : lineNumber}`;
+    para.classList.add("number"); // add class "number" to the paragraph
+    element.insertBefore(para, element.firstChild);
+});
+
+const content = document.querySelector("#includedContent");
+$(function(){
+    content.load("Etch-a-Sketch/index.html"); 
+});
