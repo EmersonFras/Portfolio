@@ -1,11 +1,9 @@
-.flex-child > * {
-    border: white;
-    border-style: solid;
-    border-width: 1px;
-}
-
 body {
     display: flex;
+    overflow-y:hidden;
+
+    font-family: system-ui, "Ubuntu", "Droid Sans", sans-serif;
+    font-size: 13px;
     flex-direction: row;
     margin: 0;
     height: 100vh;
@@ -17,13 +15,35 @@ body {
 
     display: flex;
     flex-direction: row;
-
-    background-color: red;
 }
 
-#nav {
-    background-color: #181818;
+#sidebar > #nav {
+    background-color: #333333;
 }
+
+#manager {
+    background-color: #252526;
+    flex: 4;
+}
+
+.flex-container {
+    flex: 17;
+    background-color: pink;
+    
+    display: flex;
+    flex-direction: column;
+}
+
+
+#MainSpace {
+    flex: 3;
+    background-color: #1e1e1e;
+    
+    display: flex;
+    flex-direction: column;
+    overflow-y:auto;
+}
+
 #sidebar > #nav {
     flex: 1;
     /* height: 100vh; */
@@ -32,49 +52,48 @@ body {
 }
 
 #nav.tab {
-    flex: 3;
-    /* background-color: blue; */
+    flex: 2;
+    background-color: #252526;
 }
 
 #nav.pathway {
     background-color: #1f1f1f;
-    color: blue;
+    padding: 4px 15px;
+    color: #858585;
     flex: 1;
 }
-
-#manager {
-    /* background-color: violet; */
-    flex: 4;
-}
-
-.flex-container {
-    flex: 17;
-    background-color: pink;
-
-    display: flex;
-    flex-direction: column;
-}
-
-
-#MainSpace {
-    flex: 3;
-    background-color: green;
-
-    display: flex;
-    flex-direction: column;
-}
-
 
 #content {
-    background-color: #1f1f1f;
     flex: 50;
+
+    display: flex;
+    overflow-y:auto;
+}
+
+#content > * {
+    font-size: 16px;
+    
+    
+    padding-left: 20px;
+    
+    
+}
+
+#numbers > * {
+    color: #858585;
+    margin: 5px;
+}
+
+#text-parent > * {
+    color: #3f8ed0;
+    margin: 5px;
+}
+
+#sub-text {
+    color: #c97d50;
 }
 
 
-#ConsoleSpace {
-    flex: 1;
-    background-color: yellow;
-}
 
 
 /* You can adjust the styles of the container and sidebar to fit your needs */
